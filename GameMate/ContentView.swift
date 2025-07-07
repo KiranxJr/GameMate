@@ -10,12 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            LoginView()
+            
         }
-        .padding()
+        .background(.white)
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
+           
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
 }
 
