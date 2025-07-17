@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		84B651122E24D48500482075 /* IGDB-SWIFT-API in Frameworks */ = {isa = PBXBuildFile; productRef = 84B651112E24D48500482075 /* IGDB-SWIFT-API */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		84D757F42DFFE81400447879 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +33,25 @@
 		84D757FD2DFFE81400447879 /* GameMateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameMateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		843A61EF2E1BCDD600C77290 /* Exceptions for "GameMate" folder in "GameMate" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 84D757E22DFFE81200447879 /* GameMate */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		84D757E52DFFE81200447879 /* GameMate */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				843A61EF2E1BCDD600C77290 /* Exceptions for "GameMate" folder in "GameMate" target */,
+			);
+			explicitFileTypes = {
+				Info.plist = text.xml;
+			};
 			path = GameMate;
 			sourceTree = "<group>";
 		};
@@ -52,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B651122E24D48500482075 /* IGDB-SWIFT-API in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +133,7 @@
 			);
 			name = GameMate;
 			packageProductDependencies = (
+				84B651112E24D48500482075 /* IGDB-SWIFT-API */,
 			);
 			productName = GameMate;
 			productReference = 84D757E32DFFE81200447879 /* GameMate.app */;
@@ -195,6 +217,9 @@
 			);
 			mainGroup = 84D757DA2DFFE81200447879;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				84B651102E24D48500482075 /* XCRemoteSwiftPackageReference "IGDB-SWIFT-API" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 84D757E42DFFE81200447879 /* Products */;
 			projectDirPath = "";
@@ -399,6 +424,7 @@
 				DEVELOPMENT_TEAM = V797CQWVXB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameMate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +454,7 @@
 				DEVELOPMENT_TEAM = V797CQWVXB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GameMate/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +585,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84B651102E24D48500482075 /* XCRemoteSwiftPackageReference "IGDB-SWIFT-API" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/husnjak/IGDB-SWIFT-API";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84B651112E24D48500482075 /* IGDB-SWIFT-API */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84B651102E24D48500482075 /* XCRemoteSwiftPackageReference "IGDB-SWIFT-API" */;
+			productName = "IGDB-SWIFT-API";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84D757DB2DFFE81200447879 /* Project object */;
 }

@@ -31,20 +31,26 @@ struct FloatingPlaceholderTextField: View {
                 
                 if !shouldFloat {
                     Text(placeholder)
-                        .font(.caption)
+                        .customFont(.regular,14)
                         .foregroundColor(.gray)
                         .matchedGeometryEffect(id: "placeholder", in: animation)
                         .padding(.horizontal, 10)
                       
                         .transition(.scale)
                 }
-            }  .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(isFocused ? Color.blue : Color.gray, lineWidth: 1)
+            }
+            .background(  RoundedRectangle(cornerRadius: 15).foregroundStyle(.white))
+            .overlay(
+                RoundedRectangle(cornerRadius: 15)
+                 
+                    .stroke(isFocused ? .bgPurple : Color.black, lineWidth: 1)
+              
+                    
             )
+      
             if shouldFloat {
                 Text(placeholder)
-                    .font(.caption)
+                    .customFont(.regular,14)
                     .foregroundColor(.black)
                     .matchedGeometryEffect(id: "placeholder", in: animation)
                     .padding(.horizontal, 10)
@@ -54,13 +60,13 @@ struct FloatingPlaceholderTextField: View {
             }
             
         }
+        
         .animation(.spring(duration: 0.3), value: shouldFloat)
       
        
-        .padding()
     }
 }
 
 #Preview {
-    LoginView()
+    ContentView()
 }

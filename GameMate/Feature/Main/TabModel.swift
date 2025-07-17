@@ -11,7 +11,7 @@ import  SwiftUI
 enum TabModel: String, CaseIterable {
     case home = "Home"
     case connect = "Connect"
-    case request = "Request"
+    case allSpace = "AllSpace"
     case profile = "Profile"
     
     var systemImage: String {
@@ -20,8 +20,8 @@ enum TabModel: String, CaseIterable {
             return "house"
         case .connect:
             return "arrow.trianglehead.2.clockwise.rotate.90"
-        case .request:
-            return "paperplane"
+        case .allSpace:
+            return "globe.europe.africa.fill"
         case .profile:
             return "figure.wave"
         }

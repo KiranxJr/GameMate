@@ -21,19 +21,19 @@ struct TabItem: View {
         VStack(spacing: 10) {
             Image(systemName: tab.systemImage)
                 .font(.title2)
-                .foregroundStyle(activeTab == tab ? .white : inactiveTint)
+                .foregroundStyle(activeTab == tab ? .bgPrimary : .black.opacity(0.6))
                 .frame(width: activeTab == tab ? 58 : 35, height: activeTab == tab ? 58 : 35)
                 .background {
                     if activeTab == tab {
                         Circle()
-                            .fill(tint.gradient)
+                            .fill(.black.gradient)
                             .matchedGeometryEffect(id: "ActiveTab", in: animation)
                     }
                 }
 
             Text(tab.rawValue)
-                .customFont(.regular,14)
-                .foregroundStyle(activeTab == tab ? tint : .gray)
+                .customFont( .regular,activeTab == tab ? 18 : 14)
+                .foregroundStyle(activeTab == tab ? .black : .black.opacity(0.6))
         }
         .frame(maxWidth: .infinity)
         .contentShape(Rectangle())

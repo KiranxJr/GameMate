@@ -8,11 +8,53 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            VStack{
+                /// App bar
+                AppBarView()
+                ScrollView(showsIndicators: false) {
+                    VStack{
+                        
+                        /// Game News View
+                        GameNewsView()
+                        
+                        VStack (spacing: 15){
+                            
+                            /// Connect or Request
+                            ConnectRequestView()
+                            
+                            /// All Space nav view
+                            SpaceNavView()
+                            
+                            /// Game Knowlege View
+                            GameKnowledgeView()
+                            
+                            /// Top Rated Games
+                            TopRatedGamesView()
+                        }
+                     
+                        
+                    }
+                    .padding(.horizontal)
+                    .padding(.bottom,150)
+                }
+            }
+            .padding(.top,70)
+        }
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
+        .background(.bgPurple)
+        .ignoresSafeArea()
+       
     }
 }
 
 #Preview {
-    HomeView()
+    MainView()
 }
+
+
+
+
+

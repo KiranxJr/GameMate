@@ -12,6 +12,8 @@ struct AnimatedLoadingButton: View {
     @Namespace private var animation
 
     var title: String = "Submit"
+    var size: CGFloat = 200
+    
     var action: () -> Void = {}
 
     var body: some View {
@@ -21,7 +23,7 @@ struct AnimatedLoadingButton: View {
             }
 
             // Simulate task completion
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0) {
                 withAnimation {
                     isLoading = false
                 }
@@ -35,13 +37,13 @@ struct AnimatedLoadingButton: View {
                         .matchedGeometryEffect(id: "loader", in: animation)
                 } else {
                     Text(title)
-                        .fontWeight(.semibold)
+                        .customFont(.semiBold,16)
                         .foregroundColor(.white)
                         .matchedGeometryEffect(id: "text", in: animation)
                 }
             }
-            .frame(width: isLoading ? 50 : 200, height: 50)
-            .background(Color.blue)
+            .frame(width: isLoading ? 50 : size, height: 50)
+            .background(.bgPurple)
             .cornerRadius(isLoading ? 25 : 12)
         }
         .disabled(isLoading)

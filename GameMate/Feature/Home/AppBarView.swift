@@ -9,10 +9,39 @@ import SwiftUI
 
 struct AppBarView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .bottom,spacing: 30){
+            
+            HStack(alignment: .bottom){
+                Image(systemName: "location.app")
+                    .resizable()
+                    .foregroundStyle(.white)
+                    .frame(width: 25,height: 25)
+                
+                Text("Ernakulam")
+                    .customFont(.regular,16)
+                    .foregroundStyle(.white)
+                  
+                Image(systemName: "chevron.down")
+                    .foregroundStyle(.white)
+                    .frame(width: 25,height: 25)
+            }
+            Spacer()
+            Image(systemName: "ellipsis.message")
+                .resizable()
+                .foregroundStyle(.white)
+                .frame(width: 25,height: 25)
+          
+            
+            Image(systemName: "bell")
+                .resizable()
+                .foregroundStyle(.white)
+                .frame(width: 25,height: 25)
+        }
+        .padding()
     }
 }
 
+
 #Preview {
-    AppBarView()
+    MainView()
 }

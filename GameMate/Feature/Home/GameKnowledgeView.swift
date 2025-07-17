@@ -9,10 +9,39 @@ import SwiftUI
 
 struct GameKnowledgeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: 20){
+            Image(systemName: "brain.head.profile")
+                .resizable()
+                .frame(width: 35,height: 40)
+          
+            
+            VStack(alignment: .leading){
+                Text("Game Quiz")
+                    .customFont(.regular, 18)
+                    .foregroundStyle(.black)
+                Text("Test your Game Knowledge")
+                    .customFont(.regular, 14)
+                    .foregroundStyle(.black)
+            }
+            Spacer()
+            Image(systemName: "chevron.right")
+                .resizable()
+                .frame(width: 10,height: 20)
+            
+        }
+        .padding()
+        .padding(.leading)
+        .frame(maxWidth: .infinity)
+        
+        .background(
+            Rectangle()
+                .fill(.bgPrimary)
+                .cornerRadius(12)
+        )
     }
 }
 
+
 #Preview {
-    GameKnowledgeView()
+    MainView()
 }
