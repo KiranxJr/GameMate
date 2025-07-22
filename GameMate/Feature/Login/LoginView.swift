@@ -46,7 +46,7 @@ struct LoginView: View {
                     .padding(.bottom,20)
                 })
                
-                .matchedGeometryEffect(id: "StartAnimation", in: animation)
+                .matchedGeometryEffect(id: "Login", in: animation)
                     Spacer()
                 }
                 .ignoresSafeArea()

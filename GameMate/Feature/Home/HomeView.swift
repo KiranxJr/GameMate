@@ -12,8 +12,7 @@ struct HomeView: View {
     var body: some View {
         VStack{
             VStack{
-                /// App bar
-                AppBarView()
+              
                 ScrollView(showsIndicators: false) {
                     VStack{
                         
@@ -41,7 +40,7 @@ struct HomeView: View {
                     .padding(.bottom,150)
                 }
             }
-            .padding(.top,70)
+            
         }
         .frame(maxWidth: .infinity,maxHeight: .infinity)
         .background(.bgPurple)

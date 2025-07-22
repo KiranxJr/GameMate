@@ -14,12 +14,13 @@ struct MainView: View {
     @State private var tabShapePosition : CGPoint = .zero
     var body: some View {
         ZStack(){
+         
             TabView (selection: $activeTab){
                 HomeView()
                     .tag(TabModel.home)
                 ///Hiding Native Tab Bar
                     .toolbar(.hidden,for: .tabBar)
-                Text("Connect")
+                ConnectView()
                     .tag(TabModel.connect)
                 ///Hiding Native Tab Bar
                     .toolbar(.hidden,for: .tabBar)
@@ -34,13 +35,20 @@ struct MainView: View {
                 
               
             }
-         
+            .padding(.top,65)
+            
+            VStack{
+                /// App bar
+                AppBarView()
+                Spacer()
+            }
             VStack{
                 Spacer()
                 customTabBar()
             }
         }
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+        .background(.bgPurple)
      
         .onAppear {
             GameStore.shared.fetchGames { result in
@@ -63,7 +71,8 @@ struct MainView: View {
               
             }
         }
-        .padding(.horizontal, 15)        .background {
+        .padding(.horizontal, 15)
+        .background {
             TabShape(midPoint: tabShapePosition.x)
                 .fill(.bgPrimary.opacity(0.94).gradient)
                 .ignoresSafeArea()
