@@ -52,6 +52,15 @@ struct ConnectDetailView: View {
                 }
                 .frame(width: screenWidth, height: screenHeight / 2.5)
 
+               
+                VStack {
+                    HStack{
+                        Image(systemName: "playstation.logo")
+                         Image(systemName: "desktopcomputer")
+                         Image(systemName: "xbox.logo")
+                    }
+                }
+                .padding(.top,35)
                 Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -64,7 +73,7 @@ struct ConnectDetailView: View {
                     .frame(width: 45, height: 45)
                     .foregroundColor(.white)
                     .onTapGesture {
-                        withAnimation(.spring(response: 0.45, dampingFraction: 0.85)) {
+                        withAnimation(.spring(response: 0.2, dampingFraction: 0.85)) {
                             showDetailPage = false
                         }
                     }
