@@ -71,7 +71,7 @@ struct ContentView: View {
             Image("bg\(Int.random(in: 1...6))")
                 .resizable()
                 .scaledToFill()
-                .frame(width:  UIScreen.main.bounds.width,height:  UIScreen.main.bounds.height/1.5 )
+                .frame(width:  UIScreen.main.bounds.width,height:  UIScreen.main.bounds.height/1.5 )     
                 .animation(.easeInOut(duration: 2), value: isLoading)
         }
         .overlay(content: {
